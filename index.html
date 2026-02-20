@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Phyo Khant | DevOps Engineer</title>
+<title>Phyo Khant | Junior DevOps Engineer</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 
 <style>
@@ -46,40 +47,29 @@ nav ul li a:hover {
 }
 
 .hero {
-    display:flex;
-    gap:50px;
     padding:80px 8%;
-    align-items:center;
-    flex-wrap:wrap;
+    background: linear-gradient(135deg, #1e293b, #0f172a);
 }
 
-.profile-img {
-    width:260px;
-    height:260px;
-    border-radius:50%;
-    background:url('https://via.placeholder.com/260') center/cover;
-    border:5px solid #1e293b;
+.hero h1 {
+    font-size:48px;
+    font-weight:800;
 }
 
-.hero-content h1 {
-    font-size:42px;
-    margin-bottom:10px;
-}
-
-.hero-content h3 {
+.hero h3 {
     color:#38bdf8;
-    margin-bottom:20px;
+    margin:10px 0 20px 0;
 }
 
-.btn {
-    display:inline-block;
-    padding:10px 20px;
-    background:#38bdf8;
-    color:#0f172a;
-    border-radius:8px;
-    text-decoration:none;
-    font-weight:600;
-    margin-top:15px;
+.hero p {
+    max-width:700px;
+    color:#94a3b8;
+}
+
+.contact {
+    margin-top:20px;
+    font-size:14px;
+    color:#cbd5e1;
 }
 
 section {
@@ -89,24 +79,34 @@ section {
 section h2 {
     color:#38bdf8;
     margin-bottom:30px;
-}
-
-.grid {
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:25px;
+    font-size:28px;
 }
 
 .card {
     background:#1e293b;
-    padding:20px;
+    padding:25px;
     border-radius:12px;
+    margin-bottom:25px;
     transition:0.3s;
 }
 
 .card:hover {
     transform:translateY(-5px);
     background:#334155;
+}
+
+.grid {
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+ul {
+    padding-left:20px;
+}
+
+li {
+    margin-bottom:6px;
 }
 
 footer {
@@ -117,10 +117,7 @@ footer {
 }
 
 @media(max-width:768px){
-    .hero {
-        flex-direction:column;
-        text-align:center;
-    }
+    nav ul { display:none; }
 }
 </style>
 </head>
@@ -132,31 +129,34 @@ footer {
     <ul>
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
         <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
     </ul>
 </nav>
 
 <div class="hero">
-    <div class="profile-img"></div>
-    <div class="hero-content">
-        <h1>Phyo Khant</h1>
-        <h3>Junior DevOps Engineer</h3>
-        <p>
-            I build scalable cloud infrastructure, automate deployments, 
-            and optimize AWS environments. Passionate about CI/CD, 
-            containers, and infrastructure as code.
-        </p>
-        <a href="#" class="btn">Download CV</a>
+    <h1>Phyo Khant</h1>
+    <h3>Junior DevOps Engineer</h3>
+    <p>
+        Passionate and detail-oriented DevOps Engineer focused on automation, cloud infrastructure,
+        and CI/CD processes. Experienced in AWS, Docker, GitLab CI/CD, Linux systems,
+        and cost optimization scripting.
+    </p>
+
+    <div class="contact">
+        📞 +959788389027 <br>
+        📧 phyokhant.info.personal@gmail.com <br>
+        📍 Yangon, Myanmar
     </div>
 </div>
 
 <section id="about">
     <h2>About Me</h2>
     <div class="card">
-        DevOps Engineer with strong experience in AWS cost optimization,
-        Docker-based deployments, Linux systems administration,
-        and automation scripting.
+        I enjoy bridging the gap between development and operations to create efficient,
+        reliable, and scalable systems. With hands-on experience in AWS infrastructure,
+        automation scripting, and monitoring systems, I continuously seek opportunities
+        to improve deployment workflows and system performance.
     </div>
 </section>
 
@@ -166,35 +166,68 @@ footer {
         <div class="card">AWS</div>
         <div class="card">Docker</div>
         <div class="card">Kubernetes</div>
-        <div class="card">Terraform</div>
-        <div class="card">Ansible</div>
-        <div class="card">CI/CD</div>
+        <div class="card">GitLab CI/CD</div>
         <div class="card">Linux</div>
-        <div class="card">Git</div>
-    </div>
-</section>
-
-<section id="projects">
-    <h2>Projects</h2>
-    <div class="grid">
-        <div class="card">
-            <strong>AWS Cost Automation</strong><br><br>
-            Automated 6-month AWS cost reporting with Python and Cost Explorer API.
-        </div>
-        <div class="card">
-            <strong>CI/CD Pipeline</strong><br><br>
-            Built Docker-based CI/CD pipeline using GitHub Actions.
-        </div>
+        <div class="card">Bash</div>
+        <div class="card">Microsoft Sentinel</div>
+        <div class="card">Microsoft Defender</div>
+        <div class="card">Nginx</div>
+        <div class="card">Data Center Infrastructure</div>
     </div>
 </section>
 
 <section id="experience">
     <h2>Experience</h2>
+
     <div class="card">
-        <strong>NOC Engineer</strong><br><br>
-        Monitored data center infrastructure, managed incidents,
-        maintained high system uptime and reliability.
+        <strong>Junior DevOps Engineer – Abe Content Solution</strong><br>
+        <em>2025 – Present</em>
+        <ul>
+            <li>Manage and automate CI/CD pipelines using GitLab CI/CD and AWS services.</li>
+            <li>Maintain scalable and reliable cloud infrastructure.</li>
+            <li>Develop Python scripts for AWS cost reporting and operational monitoring.</li>
+            <li>Collaborate with teams to streamline deployments and improve performance.</li>
+        </ul>
     </div>
+
+    <div class="card">
+        <strong>Data Center Engineer – AYA Bank</strong><br>
+        <em>2023 – 2025</em>
+        <ul>
+            <li>Maintained CRAC cooling, power supply, fire alarm (Novec 1230), ELV systems, ATS, MSB, PLC, and generators.</li>
+            <li>Managed monitoring systems (CRAC, UPS, VDC, Poseidon) ensuring high uptime.</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <strong>SOC Level-1 (Blue Team) – AYA Bank</strong><br>
+        <em>2024 – 2025</em>
+        <ul>
+            <li>Monitored and responded to security incidents using Microsoft Sentinel and Defender.</li>
+            <li>Performed alert analysis, threat detection, and incident escalation.</li>
+        </ul>
+    </div>
+
+</section>
+
+<section id="education">
+    <h2>Education</h2>
+
+    <div class="card">
+        <strong>BSc Computing – Edinburgh Napier University (Myanmar Campus)</strong><br>
+        <em>2020 – 2021</em>
+    </div>
+
+    <div class="card">
+        <strong>Higher National Diploma (HND) – Info Myanmar University</strong><br>
+        <em>2018 – 2019</em>
+    </div>
+
+    <div class="card">
+        <strong>Service A+ Engineering Certificate – IMCS</strong><br>
+        <em>2016</em>
+    </div>
+
 </section>
 
 <footer>
