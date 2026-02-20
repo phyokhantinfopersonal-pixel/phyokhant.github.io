@@ -110,13 +110,6 @@
         letter-spacing: -1px;
       }
 
-      /* Typing Animation Logic */
-      .typing-container {
-        display: flex;
-        align-items: center;
-        min-height: 1.6em;
-      }
-
       .hero h2 {
         font-size: 1.5rem;
         color: var(--text-muted);
@@ -125,33 +118,29 @@
         align-items: center;
       }
 
+      /* REPEATING TYPING ANIMATION */
       .typing-text {
         display: inline-block;
         overflow: hidden;
         white-space: nowrap;
         width: 0;
-        border-right: none;
-        /* "Junior DevOps Engineer" is 22 characters */
-        animation: typing 3s steps(22, end) forwards;
+        /* typing: the actual movement
+           blink: the cursor animation 
+        */
+        animation: 
+          typing 4s steps(22, end) infinite alternate,
+          cursor-blink 0.8s step-end infinite;
+        border-right: 3px solid var(--primary-glow); /* Using border as cursor for smoother flow */
+        padding-right: 5px;
       }
 
       @keyframes typing {
         from { width: 0; }
-        to { width: 22ch; }
+        to { width: 22ch; } /* Matches "Junior DevOps Engineer" length */
       }
 
-      @keyframes blink {
-        0%, 100% { opacity: 1; }
-        50% { opacity: 0; }
-      }
-
-      .cursor {
-        display: inline-block;
-        width: 10px;
-        height: 1.4rem;
-        background-color: var(--primary-glow);
-        animation: blink 1s step-end infinite;
-        margin-left: 5px;
+      @keyframes cursor-blink {
+        50% { border-color: transparent; }
       }
 
       .btn-primary {
@@ -379,7 +368,7 @@
         </p>
         <h1>Hi, I'm <span class="highlight">Phyo Khant</span></h1>
         <h2>
-            <span class="typing-text">Junior DevOps Engineer</span><span class="cursor"></span>
+            <span class="typing-text">Junior DevOps Engineer</span>
         </h2>
         <p
           style="
@@ -446,7 +435,7 @@
       </section>
 
       <section id="experience">
-        <h2 class="section-title">git log --oneline</h2>
+        <h2 class="section-title">git log -- oneline</h2>
         <div class="pipeline">
           <div class="stage">
             <div class="stage-header">
@@ -496,8 +485,7 @@
 
       <footer>
         <p>
-          echo "© 2026 Phyo Khant | Built with
-          <span style="color: var(--primary-glow)">♥</span> and code"
+          echo "© 2026 Phyo Khant"
         </p>
       </footer>
     </div>
