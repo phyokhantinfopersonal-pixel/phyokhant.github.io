@@ -4,111 +4,201 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Phyo Khant | DevOps Engineer</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 
 <style>
+* { margin:0; padding:0; box-sizing:border-box; }
+
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Inter', sans-serif;
     background: #0f172a;
     color: #e2e8f0;
+    line-height: 1.6;
 }
 
-header {
-    padding: 80px 20px;
-    text-align: center;
-    background: linear-gradient(135deg, #1e293b, #0f172a);
+nav {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    background:#0b1120;
+    position:sticky;
+    top:0;
+    z-index:1000;
 }
 
-header h1 {
-    font-size: 48px;
-    margin: 0;
+nav h2 { color:#38bdf8; }
+
+nav ul {
+    list-style:none;
+    display:flex;
+    gap:25px;
 }
 
-header p {
-    margin-top: 10px;
-    font-size: 18px;
-    color: #94a3b8;
+nav ul li a {
+    color:#cbd5e1;
+    text-decoration:none;
+    font-weight:600;
+}
+
+nav ul li a:hover {
+    color:#38bdf8;
+}
+
+.hero {
+    display:flex;
+    gap:50px;
+    padding:80px 8%;
+    align-items:center;
+    flex-wrap:wrap;
+}
+
+.profile-img {
+    width:260px;
+    height:260px;
+    border-radius:50%;
+    background:url('https://via.placeholder.com/260') center/cover;
+    border:5px solid #1e293b;
+}
+
+.hero-content h1 {
+    font-size:42px;
+    margin-bottom:10px;
+}
+
+.hero-content h3 {
+    color:#38bdf8;
+    margin-bottom:20px;
+}
+
+.btn {
+    display:inline-block;
+    padding:10px 20px;
+    background:#38bdf8;
+    color:#0f172a;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:600;
+    margin-top:15px;
 }
 
 section {
-    padding: 60px 20px;
-    max-width: 900px;
-    margin: auto;
+    padding:70px 8%;
 }
 
-h2 {
-    border-bottom: 2px solid #38bdf8;
-    padding-bottom: 10px;
+section h2 {
+    color:#38bdf8;
+    margin-bottom:30px;
 }
 
-.skills span {
-    display: inline-block;
-    background: #1e293b;
-    padding: 10px 15px;
-    margin: 6px;
-    border-radius: 20px;
+.grid {
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
 }
 
 .card {
-    background: #1e293b;
-    padding: 20px;
-    margin-top: 20px;
-    border-radius: 10px;
+    background:#1e293b;
+    padding:20px;
+    border-radius:12px;
+    transition:0.3s;
+}
+
+.card:hover {
+    transform:translateY(-5px);
+    background:#334155;
 }
 
 footer {
-    text-align: center;
-    padding: 30px;
-    background: #020617;
-    color: #64748b;
+    text-align:center;
+    padding:30px;
+    background:#020617;
+    color:#64748b;
+}
+
+@media(max-width:768px){
+    .hero {
+        flex-direction:column;
+        text-align:center;
+    }
 }
 </style>
 </head>
 
 <body>
 
-<header>
-    <h1>Phyo Khant</h1>
-    <p>Junior DevOps Engineer | AWS | Docker | Automation</p>
-</header>
+<nav>
+    <h2>PhyoKhant</h2>
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+    </ul>
+</nav>
 
-<section>
+<div class="hero">
+    <div class="profile-img"></div>
+    <div class="hero-content">
+        <h1>Phyo Khant</h1>
+        <h3>Junior DevOps Engineer</h3>
+        <p>
+            I build scalable cloud infrastructure, automate deployments, 
+            and optimize AWS environments. Passionate about CI/CD, 
+            containers, and infrastructure as code.
+        </p>
+        <a href="#" class="btn">Download CV</a>
+    </div>
+</div>
+
+<section id="about">
     <h2>About Me</h2>
     <div class="card">
-        DevOps Engineer focused on automation, cloud infrastructure, and CI/CD pipelines.
-        Experienced in AWS, Docker, and Linux systems.
+        DevOps Engineer with strong experience in AWS cost optimization,
+        Docker-based deployments, Linux systems administration,
+        and automation scripting.
     </div>
 </section>
 
-<section>
-    <h2>Skills</h2>
-    <div class="skills">
-        <span>AWS</span>
-        <span>Docker</span>
-        <span>Kubernetes</span>
-        <span>Terraform</span>
-        <span>Ansible</span>
-        <span>Linux</span>
-        <span>Git</span>
-        <span>CI/CD</span>
+<section id="skills">
+    <h2>Technical Skills</h2>
+    <div class="grid">
+        <div class="card">AWS</div>
+        <div class="card">Docker</div>
+        <div class="card">Kubernetes</div>
+        <div class="card">Terraform</div>
+        <div class="card">Ansible</div>
+        <div class="card">CI/CD</div>
+        <div class="card">Linux</div>
+        <div class="card">Git</div>
     </div>
 </section>
 
-<section>
+<section id="projects">
     <h2>Projects</h2>
-    <div class="card">
-        <strong>AWS Cost Automation</strong><br>
-        Automated 6-month AWS reporting with Python and Cost Explorer API.
+    <div class="grid">
+        <div class="card">
+            <strong>AWS Cost Automation</strong><br><br>
+            Automated 6-month AWS cost reporting with Python and Cost Explorer API.
+        </div>
+        <div class="card">
+            <strong>CI/CD Pipeline</strong><br><br>
+            Built Docker-based CI/CD pipeline using GitHub Actions.
+        </div>
     </div>
+</section>
 
+<section id="experience">
+    <h2>Experience</h2>
     <div class="card">
-        <strong>CI/CD Pipeline</strong><br>
-        Implemented Docker-based deployment with GitHub Actions.
+        <strong>NOC Engineer</strong><br><br>
+        Monitored data center infrastructure, managed incidents,
+        maintained high system uptime and reliability.
     </div>
 </section>
 
 <footer>
-    © 2026 Phyo Khant
+    © 2026 Phyo Khant | Hosted on GitHub Pages
 </footer>
 
 </body>
