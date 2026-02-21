@@ -146,18 +146,17 @@
         box-shadow: 0 0 20px rgba(0, 255, 204, 0.3);
       }
 
-      /* Titles Style (Past Version) */
+      /* Responsive Code Window Fix */
       .section-title { font-size: 2rem; margin-bottom: 2rem; display: flex; align-items: center; }
       .section-title::before { content: "./"; color: var(--primary-glow); margin-right: 10px; }
 
-      /* Code Window Responsive Fix */
       .code-window { 
         background: var(--surface-color); 
         border-radius: 8px; 
         border: 1px solid #30363d; 
         margin-bottom: 5rem;
-        max-width: 100%;
-        overflow: hidden;
+        max-width: 100%; /* Ensures it never grows wider than the screen */
+        overflow: hidden; /* Clips children but allows inner scrolling */
       }
 
       .window-header { background: #010409; padding: 0.8rem 1rem; display: flex; align-items: center; border-bottom: 1px solid #30363d; }
@@ -169,21 +168,22 @@
         font-family: var(--font-mono); 
         font-size: 0.95rem; 
         line-height: 1.7;
-        overflow-x: auto;
-        white-space: pre;
+        overflow-x: auto; /* CRITICAL: Enables horizontal scroll inside the box */
+        white-space: pre; /* Keeps YAML formatting */
       }
 
+      /* Custom scrollbar for a better look */
       .code-content::-webkit-scrollbar { height: 6px; }
       .code-content::-webkit-scrollbar-thumb { background: #30363d; border-radius: 10px; }
+      .code-content::-webkit-scrollbar-thumb:hover { background: var(--primary-glow); }
 
       .key { color: #ff7b72; } .string { color: #a5d6ff; } .comment { color: #8b949e; }
 
-      /* Skills Tags (Past Version) */
+      /* Other sections */
       .skills-grid { display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 5rem; }
       .skill-tag { background: var(--surface-color); border: 1px solid #30363d; padding: 0.7rem 1.2rem; border-radius: 4px; font-family: var(--font-mono); display: flex; align-items: center; gap: 10px; transition: 0.3s; }
       .skill-tag:hover { border-color: var(--primary-glow); transform: translateY(-3px); }
 
-      /* Experience Pipeline (Past Version) */
       .pipeline { position: relative; padding-left: 2rem; margin-bottom: 5rem; }
       .pipeline::before { content: ""; position: absolute; left: 5px; top: 0; bottom: 0; width: 2px; background: #30363d; }
       .stage { position: relative; margin-bottom: 3rem; }
@@ -235,7 +235,7 @@
 
         <div class="hero-image">
           <div class="image-wrapper">
-            <img src="Image.jpeg" alt="Phyo Khant Profile">
+            <img src="Image.jpeg">
           </div>
         </div>
       </section>
@@ -325,7 +325,7 @@
       </section>
 
       <footer>
-        <p>echo "© 2026 Phyo Khant"</p>
+        <p>echo "© 2026 Phyo Khant | Build by Phyo Khant"</p>
       </footer>
     </div>
   </body>
